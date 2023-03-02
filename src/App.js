@@ -5,6 +5,8 @@ import About from './components/About'
 import Navbar from './components/Navbar'
 import NoMatched from './components/NoMatched'
 import Products from './components/Products'
+import Featured from './components/Featured'
+import New from './components/New'
 
 function App() {
   return (
@@ -13,9 +15,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
-        <Route path='products' element={<Products />} />
+        <Route path='products' element={<Products />}> 
+          <Route path='featured' element={<Featured />}/>
+          <Route path='new' element={<New />} />
+        </Route>
         <Route path="*" element={<NoMatched />} />
-
       </Routes>
     </>
   )
