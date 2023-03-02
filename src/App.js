@@ -23,9 +23,10 @@ function App() {
           <Route path="featured" element={<Featured />} />
           <Route path="new" element={<New />} />
         </Route>
-        <Route path="user" element={<User />} />
-        <Route path="user/admin" element={<Admin />} />
-        <Route path="user/:6" element={<UserElement />} />
+        <Route path="user" element={<User />} >
+          <Route path=":userId" element={<UserElement />} />
+          <Route path="admin" element={<Admin />} />
+        </Route>
         <Route path="*" element={<NoMatched />} />
       </Routes>
     </>
