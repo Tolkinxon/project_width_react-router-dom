@@ -9,6 +9,7 @@ import Featured from './components/Featured'
 import New from './components/New'
 import User from './components/User'
 import UserElement from './components/UserElement'
+import Admin from './components/Admin'
 
 function App() {
   return (
@@ -23,9 +24,8 @@ function App() {
           <Route path="new" element={<New />} />
         </Route>
         <Route path="user" element={<User />} />
-        <Route path="user/1"  element={<UserElement />} />
-        <Route path="user/2"  element={<UserElement />} />
-        <Route path="user/3"  element={<UserElement />} />
+        <Route path="user/admin" element={<Admin />} />
+        <Route path="user/:6" element={<UserElement />} />
         <Route path="*" element={<NoMatched />} />
       </Routes>
     </>
