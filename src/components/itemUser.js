@@ -1,7 +1,8 @@
 import React from 'react'
 
-export const itemUser = () => {
+ const itemUser = () => {
   return (
     <div>itemUser</div>
   )
 }
+export default itemUser

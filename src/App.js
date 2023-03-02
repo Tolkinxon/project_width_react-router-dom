@@ -8,6 +8,7 @@ import Products from './components/Products'
 import Featured from './components/Featured'
 import New from './components/New'
 import User from './components/User'
+import  itemUser  from './components/itemUser'
 
 function App() {
   return (
@@ -21,7 +22,10 @@ function App() {
           <Route path="featured" element={<Featured />} />
           <Route path="new" element={<New />} />
         </Route>
-        <Route path='user' element={<User />} />
+        <Route path="users" element={<User />} />
+        <Route path="users/1" element={<itemUser />} />
+        <Route path="users/2" element={<itemUser />} />
+        <Route path="users/3" element={<itemUser />} />
         <Route path="*" element={<NoMatched />} />
       </Routes>
     </>
