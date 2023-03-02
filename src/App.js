@@ -23,7 +23,6 @@ function App() {
           <Route path="new" element={<New />} />
         </Route>
         <Route path="user" element={<User />} />
-        <Route path="userid" element={<userId />} />
 
         <Route path="*" element={<NoMatched />} />
       </Routes>
