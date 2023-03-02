@@ -24,7 +24,8 @@ function App() {
         </Route>
         <Route path="user" element={<User />} />
         <Route path="user/1"  element={<UserElement />} />
-
+        <Route path="user/2"  element={<UserElement />} />
+        <Route path="user/3"  element={<UserElement />} />
         <Route path="*" element={<NoMatched />} />
       </Routes>
     </>
