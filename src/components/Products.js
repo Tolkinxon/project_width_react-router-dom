@@ -5,12 +5,12 @@ const Products = () => {
   return (
     <>
       <input type="search" placeholder="search some thing" />
-      <Outlet />
 
       <nav>
         <Link to="featured">Featured</Link>
         <Link to="new">New</Link>
       </nav>
+      <Outlet />
     </>
   )
 }

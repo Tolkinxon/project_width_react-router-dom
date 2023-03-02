@@ -15,9 +15,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
-        <Route path='products' element={<Products />}> 
-          <Route path='featured' element={<Featured />}/>
-          <Route path='new' element={<New />} />
+        <Route path="products" element={<Products />}>
+          <Route index element={<Featured />} />
+       
+
+          <Route path="featured" element={<Featured />} />
+          <Route path="new" element={<New />} />
         </Route>
         <Route path="*" element={<NoMatched />} />
       </Routes>
