@@ -8,7 +8,7 @@ import Products from './components/Products'
 import Featured from './components/Featured'
 import New from './components/New'
 import User from './components/User'
-import userId from './components/userId'
+import UserElement from './components/UserElement'
 
 function App() {
   return (
@@ -23,6 +23,7 @@ function App() {
           <Route path="new" element={<New />} />
         </Route>
         <Route path="user" element={<User />} />
+        <Route path="user/1"  element={<UserElement />} />
 
         <Route path="*" element={<NoMatched />} />
       </Routes>
