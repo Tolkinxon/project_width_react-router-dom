@@ -14,21 +14,7 @@ import Admin from './components/Admin'
 function App() {
   return (
     <>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="products" element={<Products />}>
-          <Route index element={<Featured />} />
-          <Route path="featured" element={<Featured />} />
-          <Route path="new" element={<New />} />
-        </Route>
-        <Route path="user" element={<User />}>
-          <Route path="admin" element={<Admin />} />
-          <Route path=":userId" element={<UserElement />} />
-        </Route>
-        <Route path="*" element={<NoMatched />} />
-      </Routes>
+
     </>
   )
 }
