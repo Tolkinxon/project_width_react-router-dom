@@ -1,9 +1,8 @@
 import './App.css'
 import { Routes, Route } from 'react-router-dom'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Navbar from './components/Navbar'
 import Home from './components/Home'
-import bgImg from '../src/images/bg2.jpg'
 
 function App() {
   const [backgroundImage, setBackgroundImage] = useState(4)
@@ -13,7 +12,7 @@ function App() {
       <div
         className="App"
         style={{
-          backgroundImage: `url(${bgImg})`,
+          backgroundImage: `url(/bg${1}.jpg)`,
         }}
       >
         <Navbar />
