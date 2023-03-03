@@ -9,5 +9,11 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  min-height: 100vh;
+  height: 100vh;
+  overflow: scroll;
+}
+
+.home {
+  border: 2px solid red;
+  width: 40px;
 }
