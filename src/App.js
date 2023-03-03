@@ -17,6 +17,8 @@ function App() {
     }, 6000)
   }, [backgroundImage])
 
+
+
   return (
     <>
       <div
