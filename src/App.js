@@ -5,14 +5,24 @@ import Navbar from './components/Navbar'
 import Home from './components/Home'
 
 function App() {
-  const [backgroundImage, setBackgroundImage] = useState(4)
+  const [backgroundImage, setBackgroundImage] = useState(1)
+
+  useEffect(() => {
+    setTimeout(() => {
+      if (backgroundImage > 5) {
+        setBackgroundImage(backgroundImage / backgroundImage)
+      } else {
+        setBackgroundImage(backgroundImage + 1)
+      }
+    }, 6000)
+  }, [backgroundImage])
 
   return (
     <>
       <div
         className="App"
         style={{
-          backgroundImage: `url(/bg${1}.jpg)`,
+          backgroundImage: `url(/bg${backgroundImage}.jpg)`,
         }}
       >
         <Navbar />
