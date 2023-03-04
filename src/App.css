@@ -5,7 +5,8 @@
 }
 
 .App {
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

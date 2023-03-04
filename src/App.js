@@ -5,6 +5,9 @@ import Navbar from './components/Navbar'
 import Home from './components/Home'
 import Animal from './components/Animal'
 import Travel from './components/Travel'
+import Athletics from './components/Athletics'
+import Food from './components/Food'
+import Nature from './components/Nature'
 
 function App() {
   const [backgroundImage, setBackgroundImage] = useState(1)
@@ -34,6 +37,10 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path='animal' element={<Animal />} />
           <Route path='travel' elemant={<Travel />} />
+          <Route path='food' element={<Food />} />
+          <Route path='nature' element={<Nature />} />
+          <Route path='athletics' element={<Athletics />} />
+
         </Routes>
       </div>
     </>
