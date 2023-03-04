@@ -7,13 +7,11 @@ const Animals = () => {
   const [dataAnimals, setDataAnimals] = useState([])
 
   useEffect(() => {
-    getData().then(data => setDataAnimals(data))
-  },[])
- 
+    getData().then((data) => setDataAnimals(data))
+  }, [])
 
-  console.log(dataAnimals);
+  console.log(dataAnimals)
 
- 
   return (
     <>
       <div className="animals">
@@ -22,15 +20,16 @@ const Animals = () => {
         <button>fish</button>
 
         <div className="photo-container">
-          {/* {dataAnimals.map((item) => (
+          {dataAnimals.map((item, idx) => (
             <>
+              <h1>{item.node.category}</h1>
               <img
-                key={item.id}
-                src={'https://unsplash.com/photos/ezrmK4ox7SY'}
-                alt="animal-photo"
+                key={item.idx}
+                src={item.node.photoUrl[0].url}
+                alt="animal-photo" 
               />
             </>
-          ))} */}
+          ))}
         </div>
       </div>
     </>
