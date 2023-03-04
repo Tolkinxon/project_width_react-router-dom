@@ -1,17 +1,17 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import '../App.css'
 
 
 const Navbar = () => {
   return (
-    <>
+    <> 
         <nav>
-            <Link>Animals</Link>
-            {/* <Link>Animal</Link>
-            <Link>Animal</Link>
-            <Link>Animal</Link>
-            <Link>Animal</Link> */}
+            <NavLink to='animal'>Animals</NavLink>
+            <NavLink to='travel'>Travel</NavLink>
+            {/* <NavLink>Nature</NavLink>
+            <NavLink>Athletics</NavLink>
+            <NavLink>Food & Drink</NavLink> */}
         </nav>
   
     </>

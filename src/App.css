@@ -28,7 +28,20 @@ nav a {
   text-decoration: none;
   display: inline-block;
   padding: 6px;
-  border-bottom: 2px solid black;
+  color: grey;
+  font-size: 1rem;
+  border-bottom: 2px solid white;
+  cursor: pointer;
+}
+
+nav a:hover {
+  color: black;
+}
+
+nav a.active {
+  border-bottom: 3px solid black;
+  box-sizing: border-box;
+  color: black;
 }
 
 /************ NAVBAR ************/
