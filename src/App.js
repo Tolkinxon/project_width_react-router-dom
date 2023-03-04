@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import Navbar from './components/Navbar'
 import Home from './components/Home'
-import Animal from './components/Animal'
+import Animals from './components/Animals'
 import Travel from './components/Travel'
 import Athletics from './components/Athletics'
 import Food from './components/Food'
@@ -22,8 +22,6 @@ function App() {
   //   }, 6000)
   // }, [backgroundImage])
 
-
-
   return (
     <>
       <div
@@ -35,11 +33,11 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path='animal' element={<Animal />} />
-          <Route path='travel' elemant={<Travel />} />
-          <Route path='food' element={<Food />} />
-          <Route path='nature' element={<Nature />} />
-          <Route path='athletics' element={<Athletics />} />
+          <Route path="animals" element={<Animals />} />
+          <Route path="travel" elemant={<Travel />} />
+          <Route path="food" element={<Food />} />
+          <Route path="nature" element={<Nature />} />
+          <Route path="athletics" element={<Athletics />} />
         </Routes>
       </div>
     </>
