@@ -1,16 +1,19 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { getData } from '../services/getData'
 
 const Animals = () => {
   const [dataAnimals, setDataAnimals] = useState([])
 
   useEffect(() => {
-    fetch('http://localhost:3001/animals')
-      .then((data) => data.json())
-      .then((data) => setDataAnimals(data))
-  }, [])
+    getData().then(data => setDataAnimals(data))
+  },[])
+ 
 
+  console.log(dataAnimals);
+
+ 
   return (
     <>
       <div className="animals">

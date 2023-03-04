@@ -8,7 +8,6 @@ import Travel from './components/Travel'
 import Athletics from './components/Athletics'
 import Food from './components/Food'
 import Nature from './components/Nature'
-import { getData } from './services/getData'
 
 
 function App() {
@@ -34,7 +33,7 @@ function App() {
       >
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home getData={getData}/>} />
+          <Route path="/" element={<Home />} />
           <Route path="animals" element={<Animals />} />
           <Route path="travel" elemant={<Travel />} />
           <Route path="food" element={<Food />} />
