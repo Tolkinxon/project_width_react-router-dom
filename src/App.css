@@ -4,7 +4,29 @@
   box-sizing: border-box;
 }
 
+/* ::-webkit-scrollbar {
+  width: 200px;
+}
+
+::-webkit-scrollbar-track {
+  color: black;
+} */
+
+/* ::-webkit-scrollbar {
+  width: 100px;
+  background-color: green;
+}
+
+::-webkit-scrollbar-track {
+  color: black;
+}
+
+::-webkit-scrollbar-thumb {
+  color: black;
+} */
+
 .App {
+  margin: 0px auto;
   overflow-y: scroll;
   overflow-x: hidden;
   background-repeat: no-repeat;
@@ -15,24 +37,23 @@
 
 /************ NAVBAR ************/
 nav {
-  width: calc(100vw - 8px);
-  height: 2rem;
+  width: calc(100vw - 17px);
+  height: 2.5rem;
   position: fixed;
   top: 0;
   background-color: white;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
 }
 
 nav a {
   text-decoration: none;
   display: inline-block;
-  padding: 6px;
+  padding: 10px;
   color: grey;
   font-size: 1rem;
   border-bottom: 2px solid white;
   cursor: pointer;
+  position: relative;
+  left: 950px;
 }
 
 nav a:hover {

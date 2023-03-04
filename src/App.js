@@ -12,15 +12,15 @@ import Nature from './components/Nature'
 function App() {
   const [backgroundImage, setBackgroundImage] = useState(1)
 
-  useEffect(() => {
-    setTimeout(() => {
-      if (backgroundImage > 5) {
-        setBackgroundImage(backgroundImage / backgroundImage)
-      } else {
-        setBackgroundImage(backgroundImage + 1)
-      }
-    }, 6000)
-  }, [backgroundImage])
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     if (backgroundImage > 5) {
+  //       setBackgroundImage(backgroundImage / backgroundImage)
+  //     } else {
+  //       setBackgroundImage(backgroundImage + 1)
+  //     }
+  //   }, 6000)
+  // }, [backgroundImage])
 
 
 
@@ -40,7 +40,6 @@ function App() {
           <Route path='food' element={<Food />} />
           <Route path='nature' element={<Nature />} />
           <Route path='athletics' element={<Athletics />} />
-
         </Routes>
       </div>
     </>
