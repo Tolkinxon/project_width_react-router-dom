@@ -8,6 +8,8 @@ import Travel from './components/Travel'
 import Athletics from './components/Athletics'
 import Food from './components/Food'
 import Nature from './components/Nature'
+import { getData } from './services/getData'
+
 
 function App() {
   const [backgroundImage, setBackgroundImage] = useState(1)
@@ -32,7 +34,7 @@ function App() {
       >
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home getData={getData}/>} />
           <Route path="animals" element={<Animals />} />
           <Route path="travel" elemant={<Travel />} />
           <Route path="food" element={<Food />} />
