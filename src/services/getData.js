@@ -11,7 +11,6 @@ export const getData = async () => {
           node {
             category
             photoUrl {
-              id
               url
             }
           }

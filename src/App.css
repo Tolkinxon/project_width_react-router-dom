@@ -92,15 +92,34 @@ nav a.active {
 
 /********* SHOWING PHOTO  *********/
 .photo-container {
+  position: relative;
   width: 100vw;
-  height: 900px;
-  border: 2px solid blue;
-
   background-image: url('https://unsplash.com/photos/ezrmK4ox7SY');
 }
 
-/* .photo-container img {
+.photo-container span {
+  position: absolute;
+  display: inline-block;
+}
+.photo-container span:nth-child(1) {
+  left: 15px;
+  top: 0px;
+}
+
+.photo-container span:nth-child(2) {
+  left: calc(33vw + 15px);
+  top: 0px;
+}
+
+.photo-container span:nth-child(3) {
+  left: calc(66vw + 15px);
+  top: 0px;
+}
+
+.photo-container img {
   width: 30vw;
   box-shadow: 5px 5px 20px black;
-} */
+  display: block;
+  margin: 20px 0px;
+}
 /********* SHOWING PHOTO  *********/
