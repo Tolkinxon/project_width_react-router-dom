@@ -11,21 +11,21 @@ const Categories = () => {
     if (nameCategories === 'travel')
       getDataTravel().then((data) => setDataTravel(data))
     else {
-        setDataTravel(nameCategories)
+        setDataTravel([])
     }
   }, [nameCategories])
 
-  console.log(dataTravel)
+  console.log(dataTravel[0].node.travelPhoto[0].url)
 
   return (<>
     
-    <div className="photo-container">
+    {/* {dataTravel && <div className="photo-container">
           <span>
             {dataTravel.map((item, idx) => (
               <>
                 { idx % 3 === 0 &&  <img
                   key={idx}
-                  src={item.node.photoUrl[0].url}
+                  src={item.node.travelPhoto[0].url}
                   alt="animal-photo"
                 />}
               
@@ -37,7 +37,7 @@ const Categories = () => {
               <>
                 { (idx + 1) % 3 === 0 &&  <img
                   key={idx}
-                  src={item.node.photoUrl[0].url}
+                  src={item.node.travelPhoto[0].url}
                   alt="animal-photo"
                 />}
               
@@ -49,7 +49,7 @@ const Categories = () => {
               <>
                 { (idx + 2) % 3 === 0 &&  <img
                   key={idx}
-                  src={item.node.photoUrl[0].url}
+                  src={item.node.travelPhoto[0].url}
                   alt="animal-photo"
                 />}
               
@@ -57,7 +57,7 @@ const Categories = () => {
             ))}
           </span>
      
-        </div>
+        </div>} */}
   </>)
 }
 
