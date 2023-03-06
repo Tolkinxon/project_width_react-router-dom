@@ -1,11 +1,12 @@
 import React from 'react'
+import { useParams } from 'react-router-dom'
 
 const Categories = () => {
+  const { nameCategories } = useParams()
 
-    
-  return (
-    <div>Categories</div>
-  )
+  console.log(nameCategories)
+
+  return <div>Categories</div>
 }
 
 export default Categories
