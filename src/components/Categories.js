@@ -3,18 +3,18 @@ import { useParams } from 'react-router-dom'
 import { getDataTravel } from '../services/getData'
 
 const Categories = () => {
-  const [dataAnimals, setDataAnimals] = useState([])
+  const [dataTravel, setDataTravel] = useState([])
   const { nameCategories } = useParams()
 
   useEffect(() => {
     if (nameCategories === 'travel')
-      getDataTravel().then((data) => setDataAnimals(data))
+      getDataTravel().then((data) => setDataTravel(data))
     else {
-      setDataAnimals(nameCategories)
+        setDataTravel(nameCategories)
     }
   }, [nameCategories])
 
-  console.log(dataAnimals)
+  console.log(dataTravel)
 
   return <div>Categories</div>
 }
