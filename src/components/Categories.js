@@ -4,61 +4,69 @@ import { getDataTravel } from '../services/getData'
 import '../App.css'
 
 const Categories = () => {
-  const [dataTravel, setDataTravel] = useState([])
+
+  let a = 'node'
+  let b = 'travelPhoto'
+  const [allData, setAllData] = useState([
+    { node: { travelPhoto: { url: ' ' } } },
+  ])
   const { nameCategories } = useParams()
 
   useEffect(() => {
     if (nameCategories === 'travel') {
-      getDataTravel().then((data) => {
-        setDataTravel(data)
-        console.log(data[0].node.travelPhoto)
-      })
+      getDataTravel().then((data) => setAllData(data))
     } else {
-      setDataTravel([])
+      setAllData([])
     }
   }, [nameCategories])
 
+  console.log(allData)
+
   return (
     <>
-      {/* {dataTravel && <div className="photo-container">
+      {allData.length !== 0 && (
+        <div className="photo-container">
           <span>
-            {dataTravel.map((item, idx) => (
+            {allData.map((item, idx) => (
               <>
-                { idx % 3 === 0 &&  <img
-                  key={idx}
-                  src={item.node.travelPhoto[0].url}
-                  alt="animal-photo"
-                />}
-              
+                {idx % 3 === 0 && (
+                  <img
+                    key={idx}
+                    src={item[a][b].url}
+                    alt="animal-photo"
+                  />
+                )}
               </>
             ))}
           </span>
           <span>
-            {dataTravel.map((item, idx) => (
+            {allData.map((item, idx) => (
               <>
-                { (idx + 1) % 3 === 0 &&  <img
-                  key={idx}
-                  src={item.node.travelPhoto[0].url}
-                  alt="animal-photo"
-                />}
-              
+                {(idx + 1) % 3 === 0 && (
+                  <img
+                    key={idx}
+                    src={item.node.travelPhoto.url}
+                    alt="animal-photo"
+                  />
+                )}
               </>
             ))}
           </span>
           <span>
-            {dataTravel.map((item, idx) => (
+            {allData.map((item, idx) => (
               <>
-                { (idx + 2) % 3 === 0 &&  <img
-                  key={idx}
-                  src={item.node.travelPhoto[0].url}
-                  alt="animal-photo"
-                />}
-              
+                {(idx + 2) % 3 === 0 && (
+                  <img
+                    key={idx}
+                    src={item.node.travelPhoto.url}
+                    alt="animal-photo"
+                  />
+                )}
               </>
             ))}
           </span>
-     
-        </div>} */}
+        </div>
+      )}
     </>
   )
 }

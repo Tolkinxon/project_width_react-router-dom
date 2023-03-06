@@ -36,7 +36,6 @@ export const getDataTravel = async () => {
           travelPhoto {
             url
           }
-          id
         }
       }
     }
