@@ -33,12 +33,15 @@ function App() {
       >
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home />} >
+            
+
+          </Route>
           <Route path="animals" element={<Animals />} />
-          <Route path="travel" elemant={<Travel />} />
+          {/* <Route path="travel" elemant={<Travel />} />
           <Route path="food" element={<Food />} />
           <Route path="nature" element={<Nature />} />
-          <Route path="athletics" element={<Athletics />} />
+          <Route path="athletics" element={<Athletics />} /> */}
         </Routes>
       </div>
     </>
