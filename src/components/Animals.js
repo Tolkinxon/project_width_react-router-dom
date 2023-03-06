@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { getData } from '../services/getData'
+import { getDataAnimal } from '../services/getData'
 import '../App.css'
 
 
@@ -10,7 +10,7 @@ const Animals = () => {
   const [dataAnimals, setDataAnimals] = useState([])
 
   useEffect(() => {
-    getData().then((data) => setDataAnimals(data))
+    getDataAnimal().then((data) => setDataAnimals(data))
   }, [])
 
   console.log(dataAnimals)
