@@ -91,17 +91,29 @@ nav a.active {
 }
 /************ ANIMAL **************/
 
+/************ ANIMAL'S BUTTONS ****/
+.animals button {
+  width: 100px;
+  height: 40px;
+  background-color: cornsilk;
+  border-radius: 5px;
+  margin-left: 10px;
+  border: none;
+}
+/************ ANIMAL'S BUTTONS ****/
+
 /********* SHOWING PHOTO  *********/
 .photo-container {
   position: relative;
   width: 100vw;
-  background-image: url('https://unsplash.com/photos/ezrmK4ox7SY');
+  /* background-image: url('https://unsplash.com/photos/ezrmK4ox7SY'); */
 }
 
 .photo-container span {
   position: absolute;
   display: inline-block;
 }
+
 .photo-container span:nth-child(1) {
   left: 15px;
   top: 0px;
