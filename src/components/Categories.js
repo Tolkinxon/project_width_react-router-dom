@@ -10,13 +10,11 @@ const Categories = () => {
     if (nameCategories === 'travel')
       getDataTravel().then((data) => setDataAnimals(data))
     else {
-      setDataAnimals('hello wolrld')
+      setDataAnimals(nameCategories)
     }
   }, [])
 
   console.log(dataAnimals)
-
-
 
   return <div>Categories</div>
 }
