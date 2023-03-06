@@ -12,7 +12,7 @@ const Categories = () => {
     else {
       setDataAnimals(nameCategories)
     }
-  }, [])
+  }, [nameCategories])
 
   console.log(dataAnimals)
 
