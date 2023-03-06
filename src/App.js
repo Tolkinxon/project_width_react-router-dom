@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Navbar from './components/Navbar'
 import Home from './components/Home'
 import Animals from './components/Animals'
+import Categories from './components/Categories'
 import Travel from './components/Travel'
 import Athletics from './components/Athletics'
 import Food from './components/Food'
@@ -34,8 +35,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} >
-            
-
+            <Route path='/:nameCategories' element={<Categories/>}/>
           </Route>
           <Route path="animals" element={<Animals />} />
           {/* <Route path="travel" elemant={<Travel />} />
