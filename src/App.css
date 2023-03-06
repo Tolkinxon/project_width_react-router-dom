@@ -45,6 +45,10 @@ nav {
   z-index: 10;
 }
 
+nav i {
+  margin-left: 20px;
+}
+
 nav span {
   font-family: sans-serif;
   margin-left: 20px;
