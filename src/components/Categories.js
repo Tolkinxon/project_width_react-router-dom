@@ -8,18 +8,19 @@ const Categories = () => {
   const { nameCategories } = useParams()
 
   useEffect(() => {
-    if (nameCategories === 'travel')
-      getDataTravel().then((data) => setDataTravel(data))
-    else {
-        setDataTravel([])
+    if (nameCategories === 'travel') {
+      getDataTravel().then((data) => {
+        setDataTravel(data)
+        console.log(data[0].node.travelPhoto)
+      })
+    } else {
+      setDataTravel([])
     }
   }, [nameCategories])
 
-  console.log(dataTravel[0].node.travelPhoto[0].url)
-
-  return (<>
-    
-    {/* {dataTravel && <div className="photo-container">
+  return (
+    <>
+      {/* {dataTravel && <div className="photo-container">
           <span>
             {dataTravel.map((item, idx) => (
               <>
@@ -58,7 +59,8 @@ const Categories = () => {
           </span>
      
         </div>} */}
-  </>)
+    </>
+  )
 }
 
 export default Categories
