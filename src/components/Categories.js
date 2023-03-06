@@ -4,9 +4,9 @@ import { getDataTravel } from '../services/getData'
 import '../App.css'
 
 const Categories = () => {
+  let array1 = 'node'
+  let array2 = 'travelPhoto'
 
-  let a = 'node'
-  let b = 'travelPhoto'
   const [allData, setAllData] = useState([
     { node: { travelPhoto: { url: ' ' } } },
   ])
@@ -20,7 +20,6 @@ const Categories = () => {
     }
   }, [nameCategories])
 
-  console.log(allData)
 
   return (
     <>
@@ -32,7 +31,7 @@ const Categories = () => {
                 {idx % 3 === 0 && (
                   <img
                     key={idx}
-                    src={item[a][b].url}
+                    src={JSON.stringify(item).slice(-54, -4)}
                     alt="animal-photo"
                   />
                 )}
@@ -45,7 +44,7 @@ const Categories = () => {
                 {(idx + 1) % 3 === 0 && (
                   <img
                     key={idx}
-                    src={item.node.travelPhoto.url}
+                    src={item[array1][array2].url}
                     alt="animal-photo"
                   />
                 )}
@@ -58,7 +57,7 @@ const Categories = () => {
                 {(idx + 2) % 3 === 0 && (
                   <img
                     key={idx}
-                    src={item.node.travelPhoto.url}
+                    src={item[array1][array2].url}
                     alt="animal-photo"
                   />
                 )}

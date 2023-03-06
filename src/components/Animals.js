@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom'
 import { getDataAnimal } from '../services/getData'
 import '../App.css'
 
-
-
 const Animals = () => {
   const [dataAnimals, setDataAnimals] = useState([])
 
@@ -13,7 +11,7 @@ const Animals = () => {
     getDataAnimal().then((data) => setDataAnimals(data))
   }, [])
 
-  console.log(dataAnimals)
+  console.log(JSON.stringify(dataAnimals[0]).slice(-54, -4))
 
   return (
     <>
@@ -26,40 +24,42 @@ const Animals = () => {
           <span>
             {dataAnimals.map((item, idx) => (
               <>
-                { idx % 3 === 0 &&  <img
-                  key={idx}
-                  src={item.node.photoUrl[0].url}
-                  alt="animal-photo"
-                />}
-              
+                {idx % 3 === 0 && (
+                  <img
+                    key={idx}
+                    src={item['node']['photoUrl'][0].url}
+                    alt="animal-photo"
+                  />
+                )}
               </>
             ))}
           </span>
           <span>
             {dataAnimals.map((item, idx) => (
               <>
-                { (idx + 1) % 3 === 0 &&  <img
-                  key={idx}
-                  src={item.node.photoUrl[0].url}
-                  alt="animal-photo"
-                />}
-              
+                {(idx + 1) % 3 === 0 && (
+                  <img
+                    key={idx}
+                    src={item.node.photoUrl[0].url}
+                    alt="animal-photo"
+                  />
+                )}
               </>
             ))}
           </span>
           <span>
             {dataAnimals.map((item, idx) => (
               <>
-                { (idx + 2) % 3 === 0 &&  <img
-                  key={idx}
-                  src={item.node.photoUrl[0].url}
-                  alt="animal-photo"
-                />}
-              
+                {(idx + 2) % 3 === 0 && (
+                  <img
+                    key={idx}
+                    src={item.node.photoUrl[0].url}
+                    alt="animal-photo"
+                  />
+                )}
               </>
             ))}
           </span>
-     
         </div>
       </div>
     </>
