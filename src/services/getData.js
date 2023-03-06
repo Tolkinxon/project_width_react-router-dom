@@ -44,5 +44,5 @@ export const getDataTravel = async () => {
   `
 
   const result = await request(URL, query)
-  return result.photosConnection.edges
+  return result.travelsConnection.edges
 }
