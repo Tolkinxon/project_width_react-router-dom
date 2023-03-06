@@ -104,6 +104,12 @@ nav a.active {
   margin-left: 10px;
   border: none;
 }
+
+.animals button:hover {
+  color: brown;
+  background-color: white;
+}
+
 /************ ANIMAL'S BUTTONS ****/
 
 /********* SHOWING PHOTO  *********/
