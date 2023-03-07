@@ -7,17 +7,30 @@ const Categories = () => {
   let array1 = 'node'
   let array2 = 'travelPhoto'
 
-  const [allData, setAllData] = useState([{ node: { travelPhoto: { url: ' ' } } }])
+  const [allData, setAllData] = useState([
+    { node: { travelPhoto: { url: ' ' } } },
+  ])
+
+  const [getParams, setGetParams] = useState('')
   const { nameCategories } = useParams()
 
   useEffect(() => {
-    if (nameCategories === 'travel') {
+    if (nameCategories === undefined) {
+      setGetParams('travel')
+    } else {
+      setGetParams(nameCategories)
+    }
+  }, [nameCategories])
+
+  console.log(getParams)
+
+  useEffect(() => {
+    if (getParams === 'travel') {
       getDataTravel().then((data) => setAllData(data))
     } else {
       setAllData([])
     }
   }, [nameCategories])
-
 
   return (
     <>
