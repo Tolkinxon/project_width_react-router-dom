@@ -2,7 +2,7 @@ import React from 'react'
 
 const Nature = () => {
   return (
-    <div>Nature</div>
+    <div className='nature'>Nature</div>
   )
 }
 

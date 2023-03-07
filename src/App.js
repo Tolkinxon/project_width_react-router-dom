@@ -34,6 +34,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />}>
+            <Route index element={<Categories />} />
             <Route path=":nameCategories" element={<Categories />} />
           </Route>
           <Route path="animals" element={<Animals />} />
