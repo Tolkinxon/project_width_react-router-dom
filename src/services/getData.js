@@ -79,3 +79,56 @@ query MyQuery {
   return result.naturesConnection.edges
 }
 
+
+
+
+
+export const getDataAthletics = async () => {
+  const URL =
+    'https://api-us-east-1-shared-usea1-02.hygraph.com/v2/cleu37k3i37n501uj4xg3bxuf/master'
+
+  const query = gql`
+query MyQuery {
+  athleticConnection {
+    edges {
+      node {
+        athleticsPicture {
+          url
+        }
+      }
+    }
+  }
+}
+  `
+
+  const result = await request(URL, query)
+  return result.athleticConnection.edges
+}
+
+
+
+
+
+export const getDataFood = async () => {
+  const URL =
+    'https://api-us-east-1-shared-usea1-02.hygraph.com/v2/cleu37k3i37n501uj4xg3bxuf/master'
+
+  const query = gql`
+query MyQuery {
+  foodsConnection {
+    edges {
+      node {
+        foodPicture {
+          url
+        }
+      }
+    }
+  }
+}
+  `
+
+  const result = await request(URL, query)
+  return result.foodsConnection.edges
+}
+
+
