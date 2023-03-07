@@ -45,3 +45,29 @@ export const getDataTravel = async () => {
   const result = await request(URL, query)
   return result.travelsConnection.edges
 }
+
+
+
+
+export const getDataNature = async () => {
+  const URL =
+    'https://api-us-east-1-shared-usea1-02.hygraph.com/v2/cleu37k3i37n501uj4xg3bxuf/master'
+
+  const query = gql`
+query MyQuery {
+  naturesConnection {
+    edges {
+      node {
+        naturePicture {
+          url
+        }
+      }
+    }
+  }
+}
+  `
+
+  const result = await request(URL, query)
+  return result.naturesConnection.edges
+}
+

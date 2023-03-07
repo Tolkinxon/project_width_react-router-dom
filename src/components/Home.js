@@ -5,6 +5,7 @@ import '../App.css'
 const Home = ({ getData }) => {
   return (
     <>
+      
       <Outlet />
     </>
   )
