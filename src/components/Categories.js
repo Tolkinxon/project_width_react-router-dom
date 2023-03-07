@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import { getDataTravel } from '../services/getData'
+import { getDataTravel, getDataNature } from '../services/getData'
 import '../App.css'
 
 const Categories = () => {
@@ -10,10 +10,12 @@ const Categories = () => {
   const [allData, setAllData] = useState([
     { node: { travelPhoto: { url: ' ' } } },
   ])
-
   const { nameCategories } = useParams()
 
   useEffect(() => {
+    if (nameCategories === 'nature') {
+      getDataNature().then((data) => setAllData(data))
+    } 
     if (nameCategories === 'travel') {
       getDataTravel().then((data) => setAllData(data))
     } else {

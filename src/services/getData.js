@@ -1,5 +1,8 @@
 import { request, gql } from 'graphql-request'
 
+
+
+
 export const getDataAnimal = async () => {
   const URL =
     'https://api-us-east-1-shared-usea1-02.hygraph.com/v2/cleu37k3i37n501uj4xg3bxuf/master'
@@ -24,6 +27,9 @@ export const getDataAnimal = async () => {
 }
 
 
+
+
+
 export const getDataTravel = async () => {
   const URL =
     'https://api-us-east-1-shared-usea1-02.hygraph.com/v2/cleu37k3i37n501uj4xg3bxuf/master'
@@ -45,6 +51,8 @@ export const getDataTravel = async () => {
   const result = await request(URL, query)
   return result.travelsConnection.edges
 }
+
+
 
 
 
