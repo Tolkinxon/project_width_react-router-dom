@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { json, useParams } from 'react-router-dom'
 import { getDataTravel, getDataNature } from '../services/getData'
 import '../App.css'
 
@@ -12,27 +12,20 @@ const Categories = () => {
   ])
   const { nameCategories } = useParams()
 
-
-
   useEffect(() => {
-
-    // if (nameCategories === 'nature') {
-    //   getDataNature().then((data) => setAllData(data))
-    //   array2 = 'naturePicture'
-    // } 
-
+    if (nameCategories === 'nature') {
+      getDataNature().then((data) => setAllData(data))
+      array2 = 'naturePicture'
+    }
 
     if (nameCategories === 'travel') {
       getDataTravel().then((data) => setAllData(data))
-    } 
-    
-    else {
+    } else {
       setAllData([])
     }
-
   }, [nameCategories])
 
-  console.log(allData)
+  console.log()
 
   return (
     <>
@@ -42,16 +35,19 @@ const Categories = () => {
             {allData.map((item, idx) => (
               <>
                 {idx % 3 === 0 && (
-                  <img
-                    key={idx}
-                    src={item[array1][array2].url}
-                    alt="animal-photo"
-                  />
+                    <img
+                      key={idx}
+                      src={JSON.stringify(item).slice(
+                           JSON.stringify(item).search(/"https/) + 1,
+                           JSON.stringify(item).search(/"}/),
+                      )}
+                      alt="animal-photo"
+                    />
                 )}
               </>
             ))}
           </span>
-          <span>
+          {/* <span>
             {allData.map((item, idx) => (
               <>
                 {(idx + 1) % 3 === 0 && (
@@ -76,7 +72,7 @@ const Categories = () => {
                 )}
               </>
             ))}
-          </span>
+          </span> */}
         </div>
       )}
     </>
