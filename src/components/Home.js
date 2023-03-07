@@ -5,7 +5,6 @@ import '../App.css'
 const Home = ({ getData }) => {
   return (
     <>
-      <div className="home">Home</div>
       <Outlet />
     </>
   )

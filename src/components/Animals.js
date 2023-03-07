@@ -11,6 +11,8 @@ const Animals = () => {
     getDataAnimal().then((data) => setDataAnimals(data))
   }, [])
 
+  console.log(dataAnimals);
+
 
   return (
     <>
