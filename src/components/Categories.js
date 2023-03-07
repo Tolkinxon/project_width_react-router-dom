@@ -16,10 +16,10 @@ const Categories = () => {
 
   useEffect(() => {
 
-    if (nameCategories === 'nature') {
-      getDataNature().then((data) => setAllData(data))
-      array2 = 'naturePicture'
-    } 
+    // if (nameCategories === 'nature') {
+    //   getDataNature().then((data) => setAllData(data))
+    //   array2 = 'naturePicture'
+    // } 
 
 
     if (nameCategories === 'travel') {
@@ -32,7 +32,7 @@ const Categories = () => {
 
   }, [nameCategories])
 
-  console.log(nameCategories)
+  console.log(allData)
 
   return (
     <>
