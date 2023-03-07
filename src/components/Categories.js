@@ -12,15 +12,24 @@ const Categories = () => {
   ])
   const { nameCategories } = useParams()
 
+
+
   useEffect(() => {
+
     if (nameCategories === 'nature') {
       getDataNature().then((data) => setAllData(data))
+      array2 = 'naturePicture'
     } 
+
+
     if (nameCategories === 'travel') {
       getDataTravel().then((data) => setAllData(data))
-    } else {
+    } 
+    
+    else {
       setAllData([])
     }
+
   }, [nameCategories])
 
   console.log(nameCategories)
