@@ -11,26 +11,17 @@ const Categories = () => {
     { node: { travelPhoto: { url: ' ' } } },
   ])
 
-  const [getParams, setGetParams] = useState('')
   const { nameCategories } = useParams()
 
   useEffect(() => {
-    if (nameCategories === undefined) {
-      setGetParams('travel')
-    } else {
-      setGetParams(nameCategories)
-    }
-  }, [nameCategories])
-
-  console.log(getParams)
-
-  useEffect(() => {
-    if (getParams === 'travel') {
+    if (nameCategories === 'travel') {
       getDataTravel().then((data) => setAllData(data))
     } else {
       setAllData([])
     }
   }, [nameCategories])
+
+  console.log(nameCategories)
 
   return (
     <>
