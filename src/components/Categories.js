@@ -7,9 +7,7 @@ const Categories = () => {
   let array1 = 'node'
   let array2 = 'travelPhoto'
 
-  const [allData, setAllData] = useState([
-    { node: { travelPhoto: { url: ' ' } } },
-  ])
+  const [allData, setAllData] = useState([{ node: { travelPhoto: { url: ' ' } } }])
   const { nameCategories } = useParams()
 
   useEffect(() => {
@@ -31,7 +29,7 @@ const Categories = () => {
                 {idx % 3 === 0 && (
                   <img
                     key={idx}
-                    src={JSON.stringify(item).slice(-54, -4)}
+                    src={item[array1][array2].url}
                     alt="animal-photo"
                   />
                 )}

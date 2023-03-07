@@ -11,7 +11,6 @@ const Animals = () => {
     getDataAnimal().then((data) => setDataAnimals(data))
   }, [])
 
-  console.log(JSON.stringify(dataAnimals[0]).slice(-54, -4))
 
   return (
     <>
