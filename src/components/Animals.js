@@ -10,17 +10,12 @@ const Animals = () => {
 
   const booleanFilterCategory = filterCategory.get('filter')
 
-  console.log(booleanFilterCategory)
 
   useEffect(() => {
-    getDataAnimal().then((data) =>
-      setDataAnimals(
-        data.filter((item) => {
-          return item.node.category === booleanFilterCategory
-        }),
-      ),
-    )
-  }, [filterCategory])
+    getDataAnimal().then((data) => {if(booleanFilterCategory === null){setDataAnimals(data)}
+                                    else{setDataAnimals( data.filter((item) => item.node.category === booleanFilterCategory))}
+                                   } )
+   }, [filterCategory])
 
   return (
     <>
