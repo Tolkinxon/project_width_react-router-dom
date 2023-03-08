@@ -114,6 +114,7 @@ nav a.active {
 
 /********* SHOWING PHOTO  *********/
 .photo-container {
+  margin-top: 100px;
   position: relative;
   width: 100vw;
   /* background-image: url('https://unsplash.com/photos/ezrmK4ox7SY'); */
