@@ -1,11 +1,12 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import { getDataAnimal } from '../services/getData'
 import '../App.css'
 
 const Animals = () => {
   const [dataAnimals, setDataAnimals] = useState([])
+  const [filterCategory, setFilterCategory ] = useSearchParams()
 
   useEffect(() => {
     getDataAnimal().then((data) => setDataAnimals(data))
@@ -17,7 +18,7 @@ const Animals = () => {
   return (
     <>
       <div className="animals">
-        <button>mammals</button>
+        <button onClick={() => setFilterCategory({filter: 'mammals'})}>mammals</button>
         <button>birds</button>
         <button>fish</button>
 
