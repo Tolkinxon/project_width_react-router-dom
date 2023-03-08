@@ -6,21 +6,33 @@ import '../App.css'
 
 const Animals = () => {
   const [dataAnimals, setDataAnimals] = useState([])
-  const [filterCategory, setFilterCategory ] = useSearchParams()
+  const [filterCategory, setFilterCategory] = useSearchParams({})
+
+  const booleanFilterCategory = filterCategory.get('filter')
+
+  console.log(booleanFilterCategory)
 
   useEffect(() => {
     getDataAnimal().then((data) => setDataAnimals(data))
   }, [])
 
-  console.log(dataAnimals);
-
+  console.log(dataAnimals)
 
   return (
     <>
       <div className="animals">
-        <button onClick={() => setFilterCategory({filter: 'mammals'})}>mammals</button>
-        <button>birds</button>
-        <button>fish</button>
+        <button onClick={() => setFilterCategory({})}>
+          all
+        </button>
+        <button onClick={() => setFilterCategory({ filter: 'mammals' })}>
+          mammals
+        </button>
+        <button onClick={() => setFilterCategory({ filter: 'birds' })}>
+          birds
+        </button>
+        <button onClick={() => setFilterCategory({ filter: 'fish' })}>
+          fish
+        </button>
 
         <div className="photo-container">
           <span>
