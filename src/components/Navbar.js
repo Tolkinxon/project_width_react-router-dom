@@ -10,7 +10,7 @@ const Navbar = () => {
         <span>
           This site created by Tolkinxon's team | Search and have a nice mood
         </span>
-        <NavLink to="/">Home</NavLink>
+        {/* <NavLink to="/">Home</NavLink> */}
         <NavLink to="animals">Animals</NavLink>
         <NavLink to="travel">Travel</NavLink>
         <NavLink to="nature">Nature</NavLink>
