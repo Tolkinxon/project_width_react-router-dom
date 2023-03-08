@@ -22,10 +22,10 @@ const Animals = () => {
       <div className="animals">
         <button onClick={() => setFilterCategory({})}>all</button>
         <button onClick={() => setFilterCategory({ filter: 'mammal' })}>
-          mammals
+          mammal
         </button>
         <button onClick={() => setFilterCategory({ filter: 'bird' })}>
-          birds
+          bird
         </button>
         <button onClick={() => setFilterCategory({ filter: 'fish' })}>
           fish
