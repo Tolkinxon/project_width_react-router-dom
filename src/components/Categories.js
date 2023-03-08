@@ -1,38 +1,35 @@
 import React, { useState, useEffect } from 'react'
 import { json, useParams } from 'react-router-dom'
-import { getDataTravel, getDataNature, getDataAthletics, getDataFood } from '../services/getData'
+import {
+  getDataTravel,
+  getDataNature,
+  getDataAthletics,
+  getDataFood,
+} from '../services/getData'
 import '../App.css'
 
 const Categories = () => {
-  let array1 = 'node'
-  let array2 = 'travelPhoto'
-
   const [allData, setAllData] = useState([
     { node: { travelPhoto: { url: ' ' } } },
   ])
   const { nameCategories } = useParams()
 
   useEffect(() => {
-
     if (nameCategories === 'food') {
       getDataFood().then((data) => setAllData(data))
-      array2 = 'naturePicture'
     }
 
     if (nameCategories === 'athletics') {
       getDataAthletics().then((data) => setAllData(data))
-      array2 = 'naturePicture'
     }
 
     if (nameCategories === 'nature') {
       getDataNature().then((data) => setAllData(data))
-      array2 = 'naturePicture'
     }
 
     if (nameCategories === 'travel') {
       getDataTravel().then((data) => setAllData(data))
-    } 
-    else {
+    } else {
       setAllData([])
     }
   }, [nameCategories])
