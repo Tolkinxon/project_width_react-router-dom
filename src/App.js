@@ -5,23 +5,19 @@ import Navbar from './components/Navbar'
 import Home from './components/Home'
 import Animals from './components/Animals'
 import Categories from './components/Categories'
-import Travel from './components/Travel'
-import Athletics from './components/Athletics'
-import Food from './components/Food'
-import Nature from './components/Nature'
 
 function App() {
   const [backgroundImage, setBackgroundImage] = useState(1)
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     if (backgroundImage > 5) {
-  //       setBackgroundImage(backgroundImage / backgroundImage)
-  //     } else {
-  //       setBackgroundImage(backgroundImage + 1)
-  //     }
-  //   }, 6000)
-  // }, [backgroundImage])
+  useEffect(() => {
+    setTimeout(() => {
+      if (backgroundImage > 5) {
+        setBackgroundImage(backgroundImage / backgroundImage)
+      } else {
+        setBackgroundImage(backgroundImage + 1)
+      }
+    }, 6000)
+  }, [backgroundImage])
 
   return (
     <>
