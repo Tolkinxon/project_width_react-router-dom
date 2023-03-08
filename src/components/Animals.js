@@ -10,11 +10,12 @@ const Animals = () => {
 
   const booleanFilterCategory = filterCategory.get('filter')
 
+  console.log(booleanFilterCategory)
+
   useEffect(() => {
     getDataAnimal().then((data) =>
       setDataAnimals(
         data.filter((item) => {
-          console.log(item.node.category)
           return item.node.category === booleanFilterCategory
         }),
       ),
@@ -25,10 +26,10 @@ const Animals = () => {
     <>
       <div className="animals">
         <button onClick={() => setFilterCategory({})}>all</button>
-        <button onClick={() => setFilterCategory({ filter: 'mammals' })}>
+        <button onClick={() => setFilterCategory({ filter: 'mammal' })}>
           mammals
         </button>
-        <button onClick={() => setFilterCategory({ filter: 'birds' })}>
+        <button onClick={() => setFilterCategory({ filter: 'bird' })}>
           birds
         </button>
         <button onClick={() => setFilterCategory({ filter: 'fish' })}>
